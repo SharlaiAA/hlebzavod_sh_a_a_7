@@ -12,6 +12,7 @@ import psycopg
 import models, schemas, auth
 from database import engine, get_db, AsyncSessionLocal, PSYCOPG_DATABASE_URL
 
+
 @asynccontextmanager
 async def lifespan(app: FastAPI):
     async with engine.begin() as conn:
